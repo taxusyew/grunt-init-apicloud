@@ -9,6 +9,7 @@ grunt-init-apicloud
 # 创建新项目
 1. 新建项目文件夹，grunt-project
 2. 在该文件夹下，初始化模板: `grunt-init apicloud`
+
 > 如果模板文件不是放在`.grunt-init`文件夹下，那就使用`grunt-init /path/to/my-template`
 
 # 生成编译后项目
