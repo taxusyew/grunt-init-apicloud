@@ -18,7 +18,7 @@ module.exports = function(grunt) {
             release: ['build/']
         },
         copy: {
-            main: {
+            src: {
                 files: [
                     // {expand: true, cwd : 'src/css/', src: ['**'], dest: 'build/css'},
                     {expand: true, cwd : 'src/icon/', src: ['**'], dest: 'build/icon'},
@@ -26,6 +26,12 @@ module.exports = function(grunt) {
                     {expand: true, cwd : 'src/lanuch/', src: ['**'], dest: 'build/lanuch'},
                     {expand: true, cwd : 'src/html/', src: ['**'], dest: 'build/html'},
                     {expand: true, cwd : 'src/', src: ['config.xml', 'index.html'], dest: 'build/'}
+                ]
+            },
+            sync: {
+                files: [
+                    // 自己手动替换dest的地址为APICloud/workspace里的项目地址，用于一键真机同步
+                    // {expand: true, cwd : 'build/', src: ['**'], dest: '</path/to/apicloud/workspace/project>'}
                 ]
             }
         },
@@ -105,7 +111,7 @@ module.exports = function(grunt) {
 
     // Default task.
     // grunt.registerTask('default', ['copy', 'concat', 'uglify']);
-    // grunt.registerTask('cp', ['copy']);
-    grunt.registerTask('default', ['clean:release', 'copy', 'useminPrepare', 'concat:generated', 'cssmin:generated', 'uglify:generated', 'usemin', 'clean:build']);
+    grunt.registerTask('cpc', ['copy:sync']);
+    grunt.registerTask('default', ['clean:release', 'copy:src', 'useminPrepare', 'concat:generated', 'cssmin:generated', 'uglify:generated', 'usemin', 'clean:build']);
 
 };
