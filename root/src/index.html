@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
     <title>Hello APP</title>
+
+<!-- build:css ./css/css_index.css -->
     <link rel="stylesheet" type="text/css" href="./css/api.css" />
     <link rel="stylesheet" type="text/css" href="./css/common.css" />
+<!-- endbuild -->
+
 </head>
 <body>
     <div id="wrap">
@@ -20,7 +24,11 @@
         </div>
     </div>
 </body>
-<script type="text/javascript" src="./script/api.js"></script>
+<!-- build:js ./script/api_index.js -->
+<script src="./script/api.js"></script>
+<script src="./script/apiutil.js"></script>
+<script src="./script/chatbox.js"></script>
+<!-- endbuild -->
 <script type="text/javascript">
 
     apiready = function(){

@@ -26,9 +26,12 @@ exports.template = function(grunt, init, done) {
             // TODO: pull from grunt's package.json
             node_version: '>= 0.8.0',
             devDependencies: {
+                "grunt-contrib-clean": "^0.6.0",
+                "grunt-contrib-cssmin": "^0.12.3",
                 'grunt-contrib-concat': '~0.3.0',
                 "grunt-contrib-copy": "^0.8.0",
-                'grunt-contrib-uglify': '~0.2.0'
+                'grunt-contrib-uglify': '~0.2.0',
+                "grunt-usemin": "^3.0.0"
             },
         });
 
