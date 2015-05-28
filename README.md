@@ -40,3 +40,4 @@ grunt-init-apicloud
 > 第一行第二部分是替换后希望出现的路径，一般情况下usemin会在concat的阶段解析这个路径，造成最终生成代码位置出错，所以在Gruntfile.js里面的配置中，做出相应处理，现已能正确生成文件 
 
 3. 生成可以上线代码 `grunt`
+4. 同步代码到APICloud Workspace里的目录中，以便真机同步，调用方法：`grunt cpc`，之后就可以在IDE里进行一键真机同步
